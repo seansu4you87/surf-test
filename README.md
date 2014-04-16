@@ -1,6 +1,9 @@
 surf-test
 =========
 
+`rspec spec` to run the tests.  I've done a minimal implementation of the following:
+
+
 GET /listings/hawaii-bungalo 
 ```
 {
