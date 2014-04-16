@@ -5,10 +5,10 @@ describe ListingsController do
     it "returns the JSON for the listing" do
       get "/listings/hawaii-bungalo"
 
-      expect(response.body).to eql({
+      expect(JSON.parse(response.body)).to eql({
         name: "Hawaii Bungalo",
         price: 145
-      })
+      }.with_indifferent_access)
     end
   end
 
@@ -19,10 +19,10 @@ describe ListingsController do
         price: 1000
       }
 
-      expect(response.body).to eql({
+      expect(JSON.parse(response.body)).to eql({
         name: "My Listing",
         price: 1000
-      })
+      }.with_indifferent_access)
     end
   end
 
